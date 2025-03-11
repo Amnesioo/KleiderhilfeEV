@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!--Einbindung bootstrap css & js-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kleiderhilfe EV</title>
@@ -8,204 +9,270 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
     
 </head>
+
+
+
 <body>
     <header>
+            <!--Logo und Titel der Website-->
             <div class="text-center">
                 <div class="container.container-fluid">
-           
                     <div class=".col">
                         <img src="Logo_Fallstudie.png" width="100" height="100" alt="Logo Kleiderhilfe e.V.">
                         <h1>Kleiderhilfe e.V.</h1>
                     </div>
                 </div>
             </div>        
-        
+            <!--Navigationsleiste-->
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                  <a class="navbar-brand">Kleiderhilfe e.V.</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Startseite</a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link active" aria-current="page" href="#anchorzuinfotext">Über uns</a>
-                      </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#anchorzukontakt">Kontakt</a>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Spenden
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#anchorzuübergabeformular">Übergabe vor Ort</a></li>
-                          <li><a class="dropdown-item" href="#anchorzuabholformular">Abholung zu Hause</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#anchorzuspendeninformationen">Spendeninformationen</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                </div>
+                    <a class="navbar-brand">Kleiderhilfe e.V.</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Startseite</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link active" aria-current="page" href="#anchorzuinfotext">Über uns</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#anchorzukontakt">Kontakt</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Spenden
+                                        </a>
+                                    </li>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#anchorzuübergabeformular">Übergabe vor Ort</a></li>
+                                        <li><a class="dropdown-item" href="#anchorzuabholformular">Abholung zu Hause</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#anchorzuspendeninformationen">Spendeninformationen</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
             </nav>
-
     </header>
+    <!--Main-Part der Seite-->
     <main>
+        <!--Abschnitt Beschreibungstext-->
         <section>
             <div class="container-fluid">
-                <h2>Herzlich Willkommen bei Kleiderhilfe e.V. - Ihre Spende, Ihr gewähltes Ziel.</h2>
+                <h1>Herzlich Willkommen bei Kleiderhilfe e.V. - Ihre Spende, Ihr gewähltes Ziel.</h1>
                 <p>Herzlichen Dank für Ihr Interesse an unserer Spendenaktion! Mit Ihrer Unterstützung können wir Menschen in Not helfen und einen positiven Beitrag in verschiedenen Krisenregionen leisten. Im Folgenden erfahren Sie, welche Spenden wir annehmen, welche Zielgebiete wir unterstützen und wie der Spendenprozess abläuft.</p>
-    
             </div>
         </section>
         
+        <!--Abschnitt Akkordeons mit Spendenformularen und Informationen-->
+        <section>       
+            <div class="accordion" id="accordionSpendenformulare">
+                <!-- Erstes Akkordeon: Spendeninformationen -->
+                <div class="accordion-item">
+                    <h1 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Spendeninformationen
+                        </button>
+                    </h1>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionSpendenformulare">
+                        <div class="accordion-body">
+                            <div class="col-md-12 position-relative">  
+                                <h2>Was können Sie spenden?</h2>
+                                <p>Wir freuen uns über folgende gut erhaltene oder neue Kleidungsstücke und Textilien:</p>
+                                <li>Oberbekleidung für Erwachsene (z. B. Jacken, Pullover, Hosen)</li>
+                                <li>Ungetragene Unterwäsche (aus hygienischen Gründen bitten wir ausschließlich um neue Unterwäsche)</li>
+                                <li>Schuhe (bitte in gutem Zustand)</li>
+                                <li>Kinder- und Babykleidung (gerne auch Strampler, Bodys und andere Kleidungsstücke für die Kleinsten)</li>
+                                <li>Zubehör wie Schals, Mützen, Handschuhe</li>
+                                <li>Haushaltstextilien (z. B. Decken, Handtücher, Bettwäsche)</li>
+                                <p>Bitte achten Sie darauf, dass die gespendeten Artikel sauber und in einem guten Zustand sind. So können wir sicherstellen, dass sie den Empfängerinnen und Empfängern direkt zugutekommen.</p>
+                            </div> 
+                            <div class="col-md-12 position-relative"> 
+                                <h3>Welche Zielgebiete unterstützen wir?</h3>
+                                <p>Ihre Spenden werden in folgenden Regionen dringend benötigt:</p>
+                                <li>Ukraine (Unterstützung für vom Krieg betroffene Familien)</li>
+                                <li>Gaza (Hilfe für Menschen in einer der am stärksten belasteten Regionen der Welt)</li>
+                                <li>Syrien (Unterstützung für Binnenvertriebene und Geflüchtete)</li>
+                                <li>Äthiopien (Hilfe für von Dürre und Konflikten betroffene Gemeinden)</li>
+                                <li>Sudan (Unterstützung für Menschen inmitten humanitärer Krisen)</li>
+                                <li>Myanmar (Hilfe für vertriebene und notleidende Familien)</li>
+                                <li>Haiti (Unterstützung für Menschen, die von Naturkatastrophen und Armut betroffen sind)</li>
+                                <p>Jede Spende macht einen Unterschied und bringt Hoffnung in diese Regionen.</p>
+                            </div>
+                            <div class="col-md-12 position-relative">     
+                                <h4>Wie läuft die Spende ab?</h4>
+                                <p>Sie können Ihre Spende während unserer Öffnungszeiten direkt in der Geschäftsstelle abgeben oder bequem bei Ihnen zu Hause abholen lassen.</p>
+                                <p>Füllen Sie einfach unten das entsprechende Formular aus, um Ihre Spende zu registrieren. Vielen Dank!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zweites Akkordeon:Formular und Information Abholung zu Hause -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Abholung zu Hause
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSpendenformulare">
+                        <div class="accordion-body">
+                            <div class="col-md-12 position-relative">
+                                <h3>Abholung zu Hause</h3>
+                                <p>Gerne holen wir Ihre Spende bei Ihnen zu Hause ab. Füllen Sie einfach das Formular aus und wir vereinbaren einen Termin mit Ihnen.</p>
+                                <p>Bitte beachten Sie, dass die Abholung nur in einem bestimmten Umkreis unserer Geschäftsstelle möglich ist.</p>
+                            </div>
+                            <form class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip01" class="form-label">Postleitzahl</label>
+                                    <input type="number" class="form-control" id="validationTooltip01" value="" required>
+                                    <div class="invalid-tooltip">
+                                        Bitte geben Sie eine gültige Postleitzahl ein.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Straße und Hausnummer</label>
+                                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                                    <div class="invalid-tooltip">
+                                    Bitte geben Sie eine gültige Straße und Hausnummer ein.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip03" class="form-label">Art der Kleidung</label>
+                                    <select class="form-select" id="validationTooltip03" required>
+                                        <option selected disabled value="">Bitte wählen...</option>
+                                        <option>Oberbekleidung für Erwachsene</option>
+                                        <option>Unterwäsche(ungetragen)</option>
+                                        <option>Kinder-/Babykleidung</option>
+                                        <option>Schuhe</option>
+                                        <option>Zubehör</option>
+                                        <option>Haushaltstextilien</option>
+                                        <option>Andere/Gemischt</option>
+                                    </select>
+                                    <div class="invalid-tooltip">
+                                        Bitte wählen Sie die Art der Kleidung aus.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip04" class="form-label">Zielgebiet</label>
+                                    <select class="form-select" id="validationTooltip04" required>
+                                        <option selected disabled value="">Bitte wählen...</option>
+                                        <option>Ukraine</option>
+                                        <option>Gaza</option>
+                                        <option>Syrien</option>
+                                        <option>Äthiopien</option>
+                                        <option>Sudan</option>
+                                        <option>Myanmar</option>
+                                        <option>Haiti</option>
+                                    </select>
+                                    <div class="invalid-tooltip">
+                                        Bitte wählen Sie das Zielgebiet aus.
+                                    </div>
+                                </div>
+                                <div class="col-12 position-relative">
+                                    <button class="btn btn-primary" id="submit1" type="submit">Spende registrieren</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dritter Accordion: Übergabe vor Ort -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Übergabe vor Ort
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionSpendenformulare">
+                        <div class="col-md-12 position-relative">
+                            <h3>Übergabe vor Ort</h3>
+                            <p>Bitte füllen Sie dieses Formular aus, damit wir Ihre Spende registrieren können:</p>
+                        </div>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-6 position-relative">
+                                <label for="validationTooltip01" class="form-label">Postleitzahl</label>
+                                <input type="number" class="form-control" id="validationTooltip01" value="" required>
+                                <div class="invalid-tooltip">
+                                    Bitte geben Sie eine gültige Postleitzahl ein.
+                                </div>
+                            </div>
+                            <div class="col-md-6 position-relative">
+                                <label for="validationTooltip02" class="form-label">Straße und Hausnummer</label>
+                                <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                                <div class="invalid-tooltip">
+                                    Bitte geben Sie eine gültige Straße und Hausnummer ein.
+                                </div>
+                            </div>
+                            <div class="col-md-6 position-relative">
+                                <label for="validationTooltip03" class="form-label">Art der Kleidung</label>
+                                <select class="form-select" id="validationTooltip03" required>
+                                    <option selected disabled value="">Bitte wählen...</option>
+                                    <option>Oberbekleidung für Erwachsene</option>
+                                    <option>Unterwäsche(ungetragen)</option>
+                                    <option>Kinder-/Babykleidung</option>
+                                    <option>Schuhe</option>
+                                    <option>Zubehör</option>
+                                    <option>Haushaltstextilien</option>
+                                    <option>Andere/Gemischt</option>
+                                </select>
+                                <div class="invalid-tooltip">
+                                    Bitte wählen Sie die Art der Kleidung aus.
+                                </div>
+                            </div>
+                            <div class="col-md-6 position-relative">
+                                <label for="validationTooltip04" class="form-label">Zielgebiet</label>
+                                <select class="form-select" id="validationTooltip04" required>
+                                    <option selected disabled value="">Bitte wählen...</option>
+                                    <option>Ukraine</option>
+                                    <option>Gaza</option>
+                                    <option>Syrien</option>
+                                    <option>Äthiopien</option>
+                                    <option>Sudan</option>
+                                    <option>Myanmar</option>
+                                    <option>Haiti</option>
+                                </select>
+                                <div class="invalid-tooltip">
+                                    Bitte wählen Sie das Zielgebiet aus.
+                                </div>
+                            </div>
+                            <div class="col-12 position-relative">
+                                <button class="btn btn-primary" id="submit1" type="submit">Spende registrieren</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>         
+            </div>
+        </section>       
         <section>
-        <div class="accordion" id="accordionSpendenformulare">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  Spendeninformationen
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionSpendenformulare">
-                <div class="accordion-body">
-                    <div class="col-md-12 position-relative">  
-                        <h3>Was können Sie spenden?</h3>
-                        <p>Wir freuen uns über folgende gut erhaltene oder neue Kleidungsstücke und Textilien:</p>
-                        <li>Oberbekleidung für Erwachsene (z. B. Jacken, Pullover, Hosen)</li>
-                        <li>Ungetragene Unterwäsche (aus hygienischen Gründen bitten wir ausschließlich um neue Unterwäsche)</li>
-                        <li>Schuhe (bitte in gutem Zustand)</li>
-                        <li>Kinder- und Babykleidung (gerne auch Strampler, Bodys und andere Kleidungsstücke für die Kleinsten)</li>
-                        <li>Zubehör wie Schals, Mützen, Handschuhe</li>
-                        <li>Haushaltstextilien (z. B. Decken, Handtücher, Bettwäsche)</li>
-                        <p>Bitte achten Sie darauf, dass die gespendeten Artikel sauber und in einem guten Zustand sind. So können wir sicherstellen, dass sie den Empfängerinnen und Empfängern direkt zugutekommen.</p>
-                    </div> 
-                    <div class="col-md-12 position-relative"> 
-                        <h3>Welche Zielgebiete unterstützen wir?</h3>
-                        <p>Ihre Spenden werden in folgenden Regionen dringend benötigt:</p>
-                        <li>Ukraine (Unterstützung für vom Krieg betroffene Familien)</li>
-                        <li>Gaza (Hilfe für Menschen in einer der am stärksten belasteten Regionen der Welt)</li>
-                        <li>Syrien (Unterstützung für Binnenvertriebene und Geflüchtete)</li>
-                        <li>Äthiopien (Hilfe für von Dürre und Konflikten betroffene Gemeinden)</li>
-                        <li>Sudan (Unterstützung für Menschen inmitten humanitärer Krisen)</li>
-                        <li>Myanmar (Hilfe für vertriebene und notleidende Familien)</li>
-                        <li>Haiti (Unterstützung für Menschen, die von Naturkatastrophen und Armut betroffen sind)</li>
-                        <p>Jede Spende macht einen Unterschied und bringt Hoffnung in diese Regionen.</p>
-                    </div>
-                    <div class="col-md-12 position-relative">     
-                        <h4>Wie läuft die Spende ab?</h4>
-                        <p>Sie können Ihre Spende während unserer Öffnungszeiten direkt in der Geschäftsstelle abgeben oder bequem bei Ihnen zu Hause abholen lassen.</p>
-                        <p>Füllen Sie einfach unten das entsprechende Formular aus, um Ihre Spende zu registrieren. Vielen Dank!</p>
-                    </div>
-                </div>
-              </div>
+            <hr>
+            <div class="col-md-6 position-relative">
+                <p>Unsere Öffnungszeiten:</p>
+                <p>Montag bis Freitag:  08:00 - 18:00 Uhr</p>
+                <p>Samstag:             10:00 - 15:00 Uhr</p>
+                <p>Sonn- und Feiertage: geschlossen </p>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Abholung zu Hause
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionSpendenformulare">
-                <div class="accordion-body">
-                    <div class="col-md-12 position-relative">
-                        <h3>Abholung zu Hause</h3>
-                        <p>Gerne holen wir Ihre Spende bei Ihnen zu Hause ab. Füllen Sie einfach das Formular aus und wir vereinbaren einen Termin mit Ihnen.</p>
-                        <p>Bitte beachten Sie, dass die Abholung nur in einem bestimmten Umkreis unserer Geschäftsstelle möglich ist.</p>
-                    </div>
-                    <form class="row g-3 needs-validation" novalidate>
-                        <div class="col-md-6 position-relative">
-                          <label for="validationTooltip01" class="form-label">Postleitzahl</label>
-                          <input type="number" class="form-control" id="validationTooltip01" value="" required>
-                          <div class="invalid-tooltip">
-                            Bitte geben Sie eine gültige Postleitzahl ein.
-                          </div>
-                        </div>
-                        
-                        <div class="col-md-6 position-relative">
-                          <label for="validationTooltip02" class="form-label">Straße und Hausnummer</label>
-                          <input type="text" class="form-control" id="validationTooltip02" value="" required>
-                          <div class="invalid-tooltip">
-                            Bitte geben Sie eine gültige Straße und Hausnummer ein.
-                          </div>
-                        </div>
-
-                        <div class="col-md-6 position-relative">
-                            <label for="validationTooltip03" class="form-label">Art der Kleidung</label>
-                            <select class="form-select" id="validationTooltip03" required>
-                                <option selected disabled value="">Bitte wählen...</option>
-                                <option>Oberbekleidung für Erwachsene</option>
-                                <option>Unterwäsche(ungetragen)</option>
-                                <option>Kinder-/Babykleidung</option>
-                                <option>Schuhe</option>
-                                <option>Zubehör</option>
-                                <option>Haushaltstextilien</option>
-                                <option>Andere/Gemischt</option>
-                            </select>
-                            <div class="invalid-tooltip">
-                              Bitte wählen Sie die Art der Kleidung aus.
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6 position-relative">
-                            <label for="validationTooltip04" class="form-label">Zielgebiet</label>
-                            <select class="form-select" id="validationTooltip04" required>
-                                <option selected disabled value="">Bitte wählen...</option>
-                                <option>Ukraine</option>
-                                <option>Gaza</option>
-                                <option>Syrien</option>
-                                <option>Äthiopien</option>
-                                <option>Sudan</option>
-                                <option>Myanmar</option>
-                                <option>Haiti</option>
-                            </select>
-                            <div class="invalid-tooltip">
-                              Bitte wählen Sie das Zielgebiet aus.
-                            </div>
-                        </div>
-
-                        <div class="col-12 position-relative">
-                            <button class="btn btn-primary" id="submit1" type="submit">Spende registrieren</button>
-                        </div>
-                    </form>
-                </div>
-              </div>
+            <hr>
+            <div class="col-md-6 position-relative">
+                <p>Unsere Adresse:</p>
+                <p>Kleiderhilfe e.V.</p>
+                <p>Peterstraße 12</p>
+                <p>78166 Donaueschingen</p>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Übergabe vor Ort
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionSpendenformulare">
-                  <div class="accordion-body">
-                    #Spendenformular Übergabe
-                  </div>
-                </div>
-              </div>
-          </div>
+            <hr>     
+            <p>Gemeinsam können wir dort Linderung schenken, wo sie dringend gebraucht wird. Wählen Sie Ihr Krisengebiet aus und werden Sie Teil einer Bewegung, die weltweit Zeichen der Solidarität setzt.</p>
+            <p>Ihre Entscheidung. Ihre Hilfe. Direkt dort, wo sie gebraucht wird.</p>
         </section>
-        
-        
-        
-        
-        
-        
-        
-        
-        <p>Gemeinsam können wir dort Linderung schenken, wo sie dringend gebraucht wird. Wählen Sie Ihr Krisengebiet aus und werden Sie Teil einer Bewegung, die weltweit Zeichen der Solidarität setzt.</p>
-        <p>Ihre Entscheidung. Ihre Hilfe. Direkt dort, wo sie gebraucht wird.</p>
-    </section>
     </main>
     <footer>
-        <a href="platzhalter.html">Rechtliche Hinweise</a></p>
-        <a href="platzhalter.html">Kontakt</a></p>
-        <a href="platzhalter.html">Impressum</a></p>
-        <a href="platzhalter.html">Datenschutz</a></p>
-        <p>&copy; 2025 Kleiderhilfe e.V. Alle Rechte vorbehalten.</p>
+        <hr> 
+        <div class="col-md-4 position-relative-center">
+            <a href="platzhalter.html">Rechtliche Hinweise</a>
+        </div>
+        <div class="col-md-4 position-relative-right">
+            <p>&copy; 2025 Kleiderhilfe e.V. Alle Rechte vorbehalten.</p>
+        </div>   
     </footer>
 </body>
 </html>
