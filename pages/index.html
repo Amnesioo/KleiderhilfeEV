@@ -120,24 +120,25 @@
                                 <p>Gerne holen wir Ihre Spende bei Ihnen zu Hause ab. Füllen Sie einfach das Formular aus und wir vereinbaren einen Termin mit Ihnen.</p>
                                 <p>Bitte beachten Sie, dass die Abholung nur in einem bestimmten Umkreis unserer Geschäftsstelle möglich ist.</p>
                             </div>
-                            <form class="row g-3 needs-validation" novalidate>
+                            <!--Postleitzahl-Prüfung 78xxx-->
+                            <form class="row g-3 needs-validation" novalidate method="get" action="bestaetigung.html" id="abholformular">
                                 <div class="col-md-6 position-relative">
-                                    <label for="validationTooltip01" class="form-label">Postleitzahl</label>
-                                    <input type="number" class="form-control" id="validationTooltip01" value="" required>
-                                    <div class="invalid-tooltip">
-                                        Bitte geben Sie eine gültige Postleitzahl ein.
+                                    <label for="plztooltip" class="form-label">Postleitzahl</label>
+                                    <input type="number" name="plzinput" class="form-control" id="plztooltip" required min="78000" max="78999" oninput="this.value = this.value.slice(0, 5)">    
+                                    <div class="invalid-tooltip" id="plztooltipbootstrap">
+                                        Abholung leider nur für Postleitzahlen 78xxx verfügbar.
                                     </div>
                                 </div>
                                 <div class="col-md-6 position-relative">
-                                    <label for="validationTooltip02" class="form-label">Straße und Hausnummer</label>
-                                    <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                                    <label for="strassetooltip" class="form-label">Straße und Hausnummer</label>
+                                    <input type="text" name="strasseinput" class="form-control" id="strassetooltip" value="" required>
                                     <div class="invalid-tooltip">
                                     Bitte geben Sie eine gültige Straße und Hausnummer ein.
                                     </div>
                                 </div>
                                 <div class="col-md-6 position-relative">
-                                    <label for="validationTooltip03" class="form-label">Art der Kleidung</label>
-                                    <select class="form-select" id="validationTooltip03" required>
+                                    <label for="arttooltip" class="form-label">Art der Kleidung</label>
+                                    <select class="form-select" name="artinput" id="arttooltip" required>
                                         <option selected disabled value="">Bitte wählen...</option>
                                         <option>Oberbekleidung für Erwachsene</option>
                                         <option>Unterwäsche(ungetragen)</option>
@@ -152,8 +153,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 position-relative">
-                                    <label for="validationTooltip04" class="form-label">Zielgebiet</label>
-                                    <select class="form-select" id="validationTooltip04" required>
+                                    <label for="zieltooltip" class="form-label">Zielgebiet</label>
+                                    <select class="form-select" name="zielinput" id="zieltooltip" required>
                                         <option selected disabled value="">Bitte wählen...</option>
                                         <option>Ukraine</option>
                                         <option>Gaza</option>
@@ -168,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 position-relative">
-                                    <button class="btn btn-primary" id="submit1" type="submit">Spende registrieren</button>
+                                    <button class="btn btn-primary" id="spendenbutton" type="submit">Spende registrieren</button>
                                 </div>
                             </form>
                         </div>
@@ -187,10 +188,10 @@
                                 <h3>Übergabe vor Ort</h3>
                                 <p>Bitte füllen Sie dieses Formular aus, damit wir Ihre Spende registrieren können:</p>
                             </div>
-                            <form class="row g-3 needs-validation" novalidate>
+                            <form class="row g-3 needs-validation" novalidate method="get" action="bestaetigung.html" id="uebergabeformular">
                                 <div class="col-md-6 position-relative">
-                                    <label for="validationTooltip03" class="form-label">Art der Kleidung</label>
-                                    <select class="form-select" id="validationTooltip03" required>
+                                    <label for="arttooltip" class="form-label">Art der Kleidung</label>
+                                    <select class="form-select" name="artinput" id="arttooltip" required>
                                         <option selected disabled value="">Bitte wählen...</option>
                                         <option>Oberbekleidung für Erwachsene</option>
                                         <option>Unterwäsche(ungetragen)</option>
@@ -205,8 +206,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 position-relative">
-                                    <label for="validationTooltip04" class="form-label">Zielgebiet</label>
-                                    <select class="form-select" id="validationTooltip04" required>
+                                    <label for="zieltooltip" class="form-label">Zielgebiet</label>
+                                    <select class="form-select" name="zielinput" id="zieltooltip" required>
                                         <option selected disabled value="">Bitte wählen...</option>
                                         <option>Ukraine</option>
                                         <option>Gaza</option>
@@ -221,7 +222,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 position-relative">
-                                    <button class="btn btn-primary" id="submit1" type="submit">Spende registrieren</button>
+                                    <button class="btn btn-primary" id="spendenbutton" type="submit">Spende registrieren</button>
                                 </div>
                             </form>
                         </div>
@@ -249,7 +250,6 @@
                         <p>78166 Donaueschingen</p>
                         <p>+49 1520 1234567</p>
                     </div>    
-                    
                     <div class="col-sm-4 position-relative">
                         <p>Unsere Öffnungszeiten:</p>
                         <p>Montag bis Freitag:  08:00 - 18:00 Uhr</p>
@@ -284,5 +284,50 @@
             </div>
         </div>
     </footer>
+    <script>
+        (() => {
+            'use strict'
+            
+            const formulare = document.querySelectorAll('.needs-validation')
+            const abholformular = document.getElementById('abholformular')
+            const plzinput = document.getElementById('plztooltip')
+            
+            // Tooltip initialisieren
+            const plzTooltip = plztooltipbootstrap
+            const tooltip = new bootstrap.Tooltip(plzTooltip)
+            
+            const pruefePLZ = () => {
+                const plz = plzinput.value
+                const gueltig = plz.startsWith('78') && plz.length === 5
+                plzinput.setCustomValidity(gueltig ? '' : 'Ungültige Postleitzahl')
+                return gueltig
+            }
+        
+            Array.from(formulare).forEach(formular => {
+                formular.addEventListener('submit', event => {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    
+                    let isFormValid = formular.checkValidity()
+                    
+                    // Zusätzliche PLZ-Prüfung nur für Abholformular
+                    if(formular.id === 'abholformular') {
+                        isFormValid = pruefePLZ() && isFormValid
+                    }
+        
+                    if(isFormValid) {
+                        formular.submit()
+                    } else {
+                        formular.classList.add('was-validated')
+                        // Tooltip nur bei PLZ-Fehlern anzeigen
+                        if(formular.id === 'abholformular' && !pruefePLZ()) {
+                            plzTooltip.show()
+                        }
+                    }
+                }, false)
+            })
+        })()   
+        </script>
+
 </body>
 </html>
