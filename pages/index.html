@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kleiderhilfe EV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>    
+    
 </head>
-<body>
+<body class="bg-dark text-light shadow p-3 mb-5">
     <header>
         <!--Logo und Titel der Website-->
         <div class="text-center">
             <div class="container.container-fluid">
                 <div class=".col">
-                    <img src="Logo_Fallstudie.png" width="100" height="100" alt="Logo Kleiderhilfe e.V.">
-                    <h1>Kleiderhilfe e.V.</h1>
+                    <img src="Logo_Fallstudie.png" width="300" height="300" alt="Logo Kleiderhilfe e.V.">
                 </div>
             </div>
         </div>        
         <!--Navigationsleiste-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-3 border-secondary border-opacity-25 shadow p-3 mb-5">
             <div class="container-fluid">
-                <a class="navbar-brand">Kleiderhilfe e.V.</a>
+                <a class="navbar-brand"><img src="Logo_Fallstudie.png" width="35" height="35" alt="Logo Kleiderhilfe e.V."></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -32,44 +32,44 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Startseite</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link active" aria-current="page" href="#anchorzuinfotext">Über uns</a>
+                            <a class="nav-link active" aria-current="page" href="#ueberuns">Über uns</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#anchorzukontakt">Kontakt</a>
+                            <a class="nav-link active" href="#kontakt">Kontakt</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Spenden
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#anchorzuübergabeformular">Übergabe vor Ort</a></li>
-                                <li><a class="dropdown-item" href="#anchorzuabholformular">Abholung zu Hause</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#anchorzuspendeninformationen">Spendeninformationen</a></li>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item text-light" href="#accordionbutton3">Übergabe vor Ort</a></li>
+                                <li><a class="dropdown-item text-light" href="#accordionbutton2">Abholung zu Hause</a></li>
+                                <li><a class="dropdown-item text-light" href="#accordionbutton1">Spendeninformationen</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
+        
         </nav>
     </header>
     <!--Main-Part der Seite-->
     <main>
         <!--Abschnitt Beschreibungstext-->
-        <section>
+        <section class="py-4">
             <div class="container-fluid">
-                <h1>Herzlich Willkommen bei Kleiderhilfe e.V. - Ihre Spende, Ihr Ziel.</h1>
+                <h1 class="border-bottom border-3 border-secondary border-opacity-25 shadow p-3 mb-5">Willkommen bei Kleiderhilfe e.V. - Ihre Spende, Ihr Ziel.</h1>
                 <p>Herzlichen Dank für Ihr Interesse an unserer Spendenaktion! Mit Ihrer Unterstützung können wir Menschen in Not helfen und einen positiven Beitrag in verschiedenen Krisenregionen leisten. Im Folgenden erfahren Sie, welche Spenden wir annehmen, welche Zielgebiete wir unterstützen und wie der Spendenprozess abläuft.</p>
             </div>
         </section>
         
         <!--Abschnitt Akkordeons mit Spendenformularen und Informationen-->
-        <section>       
-            <div class="accordion" id="accordionSpendenformulare">
+        <section class="py-4  border-3 border-secondary border-opacity-25 shadow p-3 mb-5">       
+            <div class="accordion custom-accordion" id="accordionSpendenformulare" data-bs-theme="dark">
                 <!-- Erstes Akkordeon: Spendeninformationen -->
-                <div class="accordion-item">
+                <div class="accordion-item bg-dark" id="spendenakkordeon">
                     <h1 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="accordion-button" id="accordionbutton1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         Spendeninformationen
                         </button>
                     </h1>
@@ -107,9 +107,9 @@
                     </div>
                 </div>
                 <!-- Zweites Akkordeon:Formular und Information Abholung zu Hause -->
-                <div class="accordion-item">
+                <div class="accordion-item" id="abholakkordeon">
                     <h5 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button" btn btn-outline-light id="accordionbutton2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Abholung zu Hause
                         </button>
                     </h5>
@@ -121,7 +121,7 @@
                                 <p>Bitte beachten Sie, dass die Abholung nur in einem bestimmten Umkreis unserer Geschäftsstelle möglich ist.</p>
                             </div>
                             <!--Postleitzahl-Prüfung 78xxx-->
-                            <form class="row g-3 needs-validation" novalidate method="get" action="bestaetigung.html" id="abholformular">
+                            <form class="row g-3 needs-validation" novalidate bg-secondary bg-opacity-25 p3 rounded method="get" action="bestaetigung.html" id="abholformular">
                                 <div class="col-md-6 position-relative">
                                     <label for="plztooltip" class="form-label">Postleitzahl</label>
                                     <input type="number" name="plzinput" class="form-control" id="plztooltip" required min="78000" max="78999" oninput="this.value = this.value.slice(0, 5)">    
@@ -169,16 +169,16 @@
                                     </div>
                                 </div>
                                 <div class="col-12 position-relative">
-                                    <button class="btn btn-primary" id="spendenbutton" type="submit">Spende registrieren</button>
+                                    <button class="btn btn-primary" btn btn-outline-light id="spendenbutton" type="submit">Spende registrieren</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <!-- Dritter Accordion: Übergabe vor Ort -->
-                <div class="accordion-item">
+                <div class="accordion-item" id="uebergabeakkordeon">
                     <h6 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button" btn btn-outline-light id="accordionbutton3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Übergabe vor Ort
                         </button>
                     </h6>
@@ -188,7 +188,7 @@
                                 <h3>Übergabe vor Ort</h3>
                                 <p>Bitte füllen Sie dieses Formular aus, damit wir Ihre Spende registrieren können:</p>
                             </div>
-                            <form class="row g-3 needs-validation" novalidate method="get" action="bestaetigung.html" id="uebergabeformular">
+                            <form class="row g-3 needs-validation" novalidate bg-secondary bg-opacity-25 p3 rounded method="get" action="bestaetigung.html" id="uebergabeformular">
                                 <div class="col-md-6 position-relative">
                                     <label for="arttooltip" class="form-label">Art der Kleidung</label>
                                     <select class="form-select" name="artinput" id="arttooltip" required>
@@ -222,7 +222,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 position-relative">
-                                    <button class="btn btn-primary" id="spendenbutton" type="submit">Spende registrieren</button>
+                                    <button class="btn btn-primary" btn btn-outline-light id="spendenbutton" type="submit">Spende registrieren</button>
                                 </div>
                             </form>
                         </div>
@@ -231,9 +231,9 @@
             </div>
         </section>       
         <!--Abschnitt Über uns-->
-        <section>
+        <section class="py-4">
             <div class="container-fluid">
-                <h1>Über uns</h1>
+                <h1 id="ueberuns" class="border-bottom border-3 border-secondary border-opacity-25 shadow p-3 mb-5">Über uns</h1>
                 <p>Wir sind Kleiderhilfe e.V., ein gemeinnütziger Verein, der sich für Menschen in Krisengebieten einsetzt. Seit 2005 sammeln wir Kleidung und Textilien, um sie an Bedürftige in verschiedenen Regionen zu verteilen. Unser Ziel ist es, Menschen in Not zu helfen und ihnen Hoffnung zu schenken. Mit Ihrer Spende können wir viel bewirken und einen positiven Beitrag leisten. Vielen Dank für Ihre Unterstützung!</p>
             </div>
         
@@ -241,17 +241,17 @@
         <!--Abschnitt Kontakt-->
          
             <div class="container-fluid">
-                <h1>Kontakt</h1>
+                <h1 id="kontakt" class="border-bottom border-3 border-secondary border-opacity-25 shadow p-3 mb-5">Kontakt</h1>
                 <div class="row justify-content-start">
-                    <div class="col-sm-4 position-relative">
-                        <p>Unsere Adresse:</p>
+                    <div class="col-sm-6 position-relative border-bottom border-3 border-secondary border-opacity-25">
+                        <p class="fs-4 fw-semibold">Unsere Adresse:</p>
                         <p>Kleiderhilfe e.V.</p>
                         <p>Peterstraße 12</p>
                         <p>78166 Donaueschingen</p>
                         <p>+49 1520 1234567</p>
                     </div>    
-                    <div class="col-sm-4 position-relative">
-                        <p>Unsere Öffnungszeiten:</p>
+                    <div class="col-sm-6 position-relative border-bottom border-3 border-secondary border-opacity-25">
+                        <p class="fs-4 fw-semibold">Unsere Öffnungszeiten:</p>
                         <p>Montag bis Freitag:  08:00 - 18:00 Uhr</p>
                         <p>Samstag:             10:00 - 15:00 Uhr</p>
                         <p>Sonn- und Feiertage: geschlossen </p>
@@ -260,8 +260,7 @@
             </div>
         </section>
     </main>
-    <footer>
-        <hr> 
+    <footer >
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 position-relative-left">
@@ -273,9 +272,9 @@
                 <div class="col-md-4 position-relative-right">
                     <a href="platzhalter.html">Datenschutz</a>  
                 </div>
-            </div>      
+            </div>
+            <hr>      
         </div> 
-        <hr>
         <div class="container-fluid">
             <div class="row justify-content-left">
             <div class="col-md-12 text-center">
@@ -291,7 +290,10 @@
             const formulare = document.querySelectorAll('.needs-validation')
             const abholformular = document.getElementById('abholformular')
             const plzinput = document.getElementById('plztooltip')
-            
+           
+            document.querySelectorAll('.form-control, .form-select').forEach(element => {
+            element.classList.add('bg-dark', 'text-light');
+        });
             // Tooltip initialisieren
             const plzTooltip = plztooltipbootstrap
             const tooltip = new bootstrap.Tooltip(plzTooltip)
@@ -317,7 +319,8 @@
         
                     if(isFormValid) {
                         formular.submit()
-                    } else {
+                    } 
+                    else {
                         formular.classList.add('was-validated')
                         // Tooltip nur bei PLZ-Fehlern anzeigen
                         if(formular.id === 'abholformular' && !pruefePLZ()) {
@@ -327,7 +330,6 @@
                 }, false)
             })
         })()   
-        </script>
-
+    </script>
 </body>
 </html>
